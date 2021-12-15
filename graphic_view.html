@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+
+    @font-face {
+      font-family: 'Neue Haas Grotesk Display Pro 45 Light';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Neue Haas Grotesk Display Pro 45 Light'), url('NeueHaasDisplayLight.woff') format('woff');
+    }
+    
+
+    @font-face {
+      font-family: 'Neue Haas Grotesk Display Pro 46 Light Italic';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Neue Haas Grotesk Display Pro 46 Light Italic'), url('NeueHaasDisplayLightItalic.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Neue Haas Grotesk Display Pro 35 Thin';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Neue Haas Grotesk Display Pro 35 Thin'), url('NeueHaasDisplayThin.woff') format('woff');
+    }
+    
+
+    @font-face {
+      font-family: 'Neue Haas Grotesk Display Pro 36 Thin Italic';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Neue Haas Grotesk Display Pro 36 Thin Italic'), url('NeueHaasDisplayThinItalic.woff') format('woff');
+    }
+    
+   @font-face {
+      font-family: 'Neue Haas Grotesk Display Pro 55 Roman';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Neue Haas Grotesk Display Pro 55 Roman'), url('NeueHaasDisplayRoman.woff') format('woff');
+    }
+      
+
+
+
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f6f6f6;
+      }
+
+      u {
+        text-decoration: none;
+        border-bottom: 2px solid black;
+      }
+
+      a.link {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .link + .link {
+        margin-left: 15px;
+      }
+
+      #circles {
+        width: 470px;
+        height: 80px;
+        float: right;
+        margin-top: 50px;
+      }
+
+      .circle {
+        width: 70px;
+        height: 70px;
+      }
+
+      .text_container {
+        position: relative;
+      }
+
+      .text {
+        font-family: 'Neue Haas Grotesk Display Pro 45 Light';
+        letter-spacing: 0.4px;
+        position: absolute;
+        margin-top: 380px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-animation: fadein 2.5s;
+        -moz-animation: fadein 2.5s;
+        -ms-animation: fadein 2.5s;
+        -o-animation: fadein 2.5s;
+        animation: fadein 2.5s alternate;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+
+      .thumbnails {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 210px;
+      }
+
+      .p_move {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: show 1.5s forwards;
+      }
+
+      div.arrow {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+      }
+
+      .arrow_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      .about_p1_container{
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 80px;
+        opacity: 0;
+      }
+
+      .about_p1_3 {
+        margin-top: 5px;
+      }
+
+
+      .about_p3_container{
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 80px;
+        opacity: 0;
+      }
+
+      .about_p3_3 {
+        margin-top: 5px;
+      }
+
+
+
+      .about_p4_container{
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 80px;
+        opacity: 0;
+      }
+
+      .about_p4_3 {
+        margin-top: 5px;
+      }
+
+
+
+     @keyframes play-state {
+        0% {transform: translateY(10px);
+        opacity: 0;}
+        100% {transform: translateY(0);
+        opacity: 1;}
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="circles">
+      <a class="link" href="/"><img class="circle_1 circle" src="circle1.png"
+      /></a>
+      <a class="link"><img class="circle_2 circle" src="circle2.png" /></a>
+      <a class="link"><img class="circle_3 circle" src="circle3.png" /></a>
+      <a class="link" href="move.html" ><img class="circle_4 circle" src="circle4.png" /></a>
+      <a class="link"><img class="circle_5 circle" src="circle5.png" /></a>
+    </div>
+
+      <div class="text">
+        <div class="arrow">
+          <img class="arrow_img" src = "icon.gif">
+        </div>
+        <p style="text-align: center">
+          Mouse-over the circle: project-thumbnail above <br />
+          you want to see.
+        </p>
+      </div>
+
+    <div class="thumbnails">
+      <img class="p_move c1" src="record.png" />
+      <img class="p_move c2" src="move.png" />
+      <img class="p_move c3" src="bean.png" />
+      <img class="p_move c4" src="move.png" />
+      <img class="p_move c5" src="inout.png" />
+    </div>
+
+    <div class = "about_p1_container">
+
+      <div class = "about_p1_1" 
+        style= "font-family: 'Neue Haas Grotesk Display Pro 46 Light Italic'; font-size: 1.4em;">
+        BX, UX
+      </div>
+
+      <div class = "about_p1_2" 
+        style="font-family: 'Neue Haas Grotesk Display Pro 55 Roman'; font-size: 1.6em;">
+        <img class = "about_p1_arrow" src="left_arrow.png" style= "width: 20px; height:20px;"> <U>RE:CORD for Blind people</U>
+      </div>
+
+      <div class = "about_p1_3" 
+        style= "color:#ff4e00; font-family: 'Neue Haas Grotesk Display Pro 45 Light';font-size: 1.1em;">
+        Click to project in detail
+      </div>
+
+    </div>
+
+
+
+    <div class = "about_p3_container">
+
+      <div class = "about_p3_1" 
+        style= "font-family: 'Neue Haas Grotesk Display Pro 46 Light Italic'; font-size: 1.4em;">
+        UX/UI
+      </div>
+
+      <div class = "about_p3_2" 
+        style="font-family: 'Neue Haas Grotesk Display Pro 55 Roman'; font-size: 1.6em;">
+        <img class = "about_p1_arrow" src="left_arrow.png" style= "width: 20px; height:20px;"> <U>NAVER Happy bean: app</U>
+      </div>
+
+      <div class = "about_p3_3" 
+        style= "color:#ff4e00; font-family: 'Neue Haas Grotesk Display Pro 45 Light';font-size: 1.1em;">
+        Click to project in detail
+      </div>
+
+    </div>
+
+
+
+    <div class = "about_p4_container">
+
+      <div class = "about_p4_1" 
+        style= "font-family: 'Neue Haas Grotesk Display Pro 46 Light Italic'; font-size: 1.4em;">
+        BX, Graphic
+      </div>
+
+      <div class = "about_p4_2" 
+        style="font-family: 'Neue Haas Grotesk Display Pro 55 Roman'; font-size: 1.6em;">
+        <img class = "about_p1_arrow" src="left_arrow.png" style= "width: 20px; height:20px;"> <U>2020 MOVE promotion</U>
+      </div>
+
+      <div class = "about_p4_3" 
+        style= "color:#ff4e00; font-family: 'Neue Haas Grotesk Display Pro 45 Light';font-size: 1.1em;">
+        Click to project in detail
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+      const text = document.querySelector('.text')
+
+      const thumbnails = document.querySelector('.thumbnails')
+      const p_move = thumbnails.querySelectorAll('img')
+
+      const about_p1_container = document.querySelector('.about_p1_container')
+      const about_p3_container = document.querySelector('.about_p3_container')
+      const about_p4_container = document.querySelector('.about_p4_container')
+
+      const circles = document.querySelector('#circles')
+      const circle = circles.querySelectorAll('img')
+
+      circles.onmouseover = function () {
+        text.style.display = 'block'
+
+      }
+
+      // c1
+      circle[0].onmouseover = function () {
+        p_move[0].style.display = 'block'
+        p_move[0].style.animation = 'fadein 1s forwards'
+        about_p1_container.style.animation ='play-state 2s forwards'
+        text.style.animation = 'block'
+
+      }
+
+      circle[0].onmouseleave = function () {
+        p_move[0].style.display = 'none'
+        if (p_move[0].style.display === 'block') {
+          p_move[0].style.animation = 'fadeout 1.5s forwards'
+        } else {
+          text.style.animation = 'block'
+          about_p1_container.style.animation ='block'
+        }
+      }
+
+      // c2
+      circle[1].onmouseover = function () {
+        p_move[1].style.display = 'block'
+        p_move[1].style.animation = 'fadein 1s forwards'
+        text.style.animation = 'block'
+      }
+      circle[1].onmouseleave = function () {
+        p_move[1].style.display = 'none'
+        if (p_move[1].style.display === 'block') {
+          p_move[1].style.animation = 'fadeout 1.5s forwards'
+        } else {
+          text.style.animation = 'block'
+        }
+      }
+
+      // c3
+      circle[2].onmouseover = function () {
+        p_move[2].style.display = 'block'
+        p_move[2].style.animation = 'fadein 1s forwards'
+        about_p3_container.style.animation ='play-state 2s forwards'
+        text.style.animation = 'block'
+      }
+      circle[2].onmouseleave = function () {
+        p_move[2].style.display = 'none'
+        if (p_move[2].style.display === 'block') {
+          p_move[2].style.animation = 'fadeout 1.5s forwards'
+        } else {
+          text.style.animation = 'block'
+          about_p3_container.style.animation ='block'
+        }
+      }
+
+      // c4
+      circle[3].onmouseover = function () {
+        p_move[3].style.display = 'block'
+        p_move[3].style.animation = 'fadein 1s forwards'
+        about_p4_container.style.animation ='play-state 2s forwards'
+        text.style.animation = 'block'
+      }
+      circle[3].onmouseleave = function () {
+        p_move[3].style.display = 'none'
+        if (p_move[3].style.display === 'block') {
+          p_move[3].style.animation = 'fadeout 1.5s forwards'
+        } else {
+          text.style.animation = 'block'
+          about_p4_container.style.animation ='block'
+        }
+      }
+
+      // c5
+      circle[4].onmouseover = function () {
+        p_move[4].style.display = 'block'
+        if (p_move[4]) {
+          p_move[4].style.animation = 'fadein 1s forwards'
+        }
+        text.style.animation = 'block'
+      }
+      circle[4].onmouseleave = function () {
+        p_move[4].style.display = 'none'
+        if (p_move[4].style.display === 'block') {
+          p_move[4].style.animation = 'fadeout 1.5s forwards'
+        } else {
+          text.style.animation = 'block'
+        }
+      }
+
+      circles.onmouseleave = function () {
+        text.style.animation = 'fadein 2s forwards'
+      }
+
+
+    </script>
+  </body>
+</html>

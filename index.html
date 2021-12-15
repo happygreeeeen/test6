@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> </title>
+	<style type="text/css">
+
+
+		body{background-image: url('bgimg1.jpg');
+			background-size: cover;
+			background-position: 100px 400px;
+			background-repeat: no-repeat;}
+
+		body{font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; letter-spacing: 0.03em;}
+
+		.intro1 {
+			float: right; padding-right: 70px; margin-top: 25px; opacity: 0;
+			-webkit-animation:  fadein 2.5s;
+			-moz-animation:  fadein 2.5s;
+			-ms-animation: fadein 2.5s;
+			-o-animation: fadein 2.5s;
+			animation:  fadein 2.5s;}
+
+		@keyframes fadein {
+			from {opacity: 0;} to {opacity: 1;}
+			}
+		.intro1 {animation-delay: 0.5s; animation-fill-mode: forwards;}
+
+
+		.intro2 {
+			float: right; padding-right: 100px; margin-top: 25px; opacity: 0;
+			-webkit-animation:  fadein 2.5s;
+			-moz-animation:  fadein 2.5s;
+			-ms-animation: fadein 2.5s;
+			-o-animation: fadein 2.5s;
+			animation:  fadein 2.5s;}
+
+		@keyframes fadein {
+			from {opacity: 0;} to {opacity: 1;}
+			}
+		.intro2 {animation-delay: 0.3s; animation-fill-mode: forwards;}
+
+		.under_name{font-style: italic; font-weight: 300; font-size: 4em;}
+		.under_ux{font-weight: 300; font-size: 4em;}
+		.under_design{font-weight: 300; font-size: 4em;}
+
+		.contact{width: 30px; height: auto;}
+		.under_contact{font-size: 2.2em;}
+
+		#under {position: absolute;left: 60px; top: 70px; display: flex; flex-direction: column;}
+		.under_design {margin-left: 20px;}
+		.under_uxdesigndiv {display: inline-flex;}
+		.under_designer:hover{filter: blur(2px);}
+		.under_works:hover{filter: blur(2px);}
+		.under_contact:hover{color: #ff5a08;}
+
+
+		.under1 {transform: translateY(0);
+		opacity: 1;
+		animation-name: play-state;
+		animation-timing-function: ease;
+		animation-duration: 2s;
+		}
+
+		@keyframes play-state {
+			0% {transform: translateY(20px);
+				opacity: 0;}
+			100% {transform: translateY(0);
+				opacity: 1;}
+		}
+
+		.under2 {transform: translateY(0);
+			opacity: 0;
+			animation-name: play-state;
+			animation-timing-function: ease;
+			animation-duration: 2s;
+			animation-delay: 0.5s;
+			animation-fill-mode: forwards;}
+
+		@keyframes play-state {
+			0% {transform: translateY(20px);
+				opacity: 0;}
+			100% {transform: translateY(0);
+				opacity: 1;}
+		}
+
+		.hammer {position: absolute; top: 150px; right: 100px;
+			animation: motion 1.1s linear 0s infinite alternate;}
+
+		@keyframes motion{
+			0%{top: 150px;}
+			100% {top: 115px;}
+		}
+
+	</style>
+</head>
+
+<body>
+	<body bgcolor="f5f5f5">
+	<body link="black" alink="black" vlink="black">
+
+	<div class= "intro1">
+		<p>Feel free to look around <br>greenworks.com and <br>thank you for visiting!</p>
+	</div>
+	<div class = "intro2">
+		<p>Hi, Green Jeong <br> is a designer <br> based in seoul, KR </p>
+	</div>
+
+		<div id = "under">
+			<div class = "under1">
+				<div class = "under_name">
+					GREEN JEONG
+				</div>
+
+				<div class = "under_uxdesigndiv">
+					<div class = "under_ux">
+						UX, BX 
+					</div>
+
+					<div class = "under_design">
+						<div class = "under_designer">
+							<A href="index_3.html">Designer </A> 
+							<br> 
+						</div>
+						<div class = "under_works">
+							<A href="graphic_view.html">Design works </A>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "under2">
+
+				<div class = "under_contact">
+					<br>
+					<img class="contact" src="contact2.png">
+					Contact
+					<sup>(1)</sup><a href="index_4.html">email</a> or
+					<sup>(2)</sup><a href="https://www.behance.net/misogene5a9c" target="_blank">Behance</a>
+				</div>
+			</div>
+		</div>
+
+		<img class= "hammer" src = "ham.png" width="36%" height="auto">
+
+</body>
+</html>
